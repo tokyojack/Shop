@@ -1,0 +1,1 @@
+SELECT title, download_url FROM shopItems WHERE title=?

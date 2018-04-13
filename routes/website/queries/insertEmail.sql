@@ -1,0 +1,1 @@
+INSERT IGNORE INTO emails(email) VALUES(?);

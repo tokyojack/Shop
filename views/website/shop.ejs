@@ -1,0 +1,13 @@
+<% include ../partials/header %>
+
+<% for(var i = 0; i < items.length; i++) { %>
+
+  <% var item = items[i]  %>
+<% console.log(item.picture_url) %>
+<img src="<%= item.picture_url %>" height="500px" width="500px">
+  <p><%= item.title %></p>
+  <div>($<%= item.cost  %>) <a href="/checkout/<%= item.id  %>">Buy</a></div>
+        
+<% }  %>
+
+<% include ../partials/footer %>

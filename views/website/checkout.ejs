@@ -1,0 +1,8 @@
+<% include ../partials/header %>
+    <h1><%= item.title %></h1>
+
+    <form action="/checkout/<%= item.id %>" method="post">
+        <input type="email" name="email">
+    </form>
+
+<% include ../partials/footer %>

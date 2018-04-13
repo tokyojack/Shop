@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<form action="/edit/<%= item.id %>" id="edit" method="post" class="form">
+  <input type="text" name="title" placeholder="Title" value="<%= item.title %>">
+  <textarea id="description" name="description" form="edit" placeholder="Description"><%= item.description %></textarea>
+  <input type="text" name="price" placeholder="Price" value="<%= item.cost %>">
+  <input type="text" name="pictureURL" placeholder="Picture URL" value="<%= item.picture_url %>">
+  <input type="text" name="downloadURL" placeholder="Download URL" value="<%= item.download_url %>">
+
+  <button>Edit</button>
+
+</form>
+
+<% include ../partials/footer %>

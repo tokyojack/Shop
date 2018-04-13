@@ -1,0 +1,1 @@
+SELECT * FROM shopItems WHERE shopItems.id=?

@@ -1,0 +1,1 @@
+DELETE FROM shopItems WHERE id=?;

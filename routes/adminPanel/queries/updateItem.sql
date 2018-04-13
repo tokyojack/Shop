@@ -1,0 +1,1 @@
+UPDATE shopItems SET title=?, description=?, cost=?, picture_url=?, download_url=? WHERE id=?;
