@@ -16,5 +16,10 @@ module.exports = {
     emailAccount: {
         username: '',
         password: ''
-    }
+    },
+    PayPal: {
+        'mode': 'sandbox', //sandbox or live
+        'client_id': '',
+        'client_secret': ''
+      }
 };

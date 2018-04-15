@@ -11,19 +11,16 @@ var HashMap = require('hashmap');
 
 var colors = require('colors');
 
+var config = require('./config/config');
+
 //============================= PayPal =============================
 
 var paypal = require('paypal-rest-sdk');
 
-paypal.configure({
-  'mode': 'sandbox', //sandbox or live
-  'client_id': '',
-  'client_secret': ''
-});
+paypal.configure(config.PayPal);
 
 //============================= Pool =============================
 
-var config = require('./config/config');
 var mysql = require("mysql");
 var pool = mysql.createPool(config.db);
 
