@@ -52,8 +52,10 @@ module.exports = function (pool, paypal, transcation) {
 
                     var itemData = item[0];
 
+                    // Get's the URL
                     var url = req.protocol + "://" + req.get("host");
 
+                    // Create's cart
                     var cartItems = [{
                         name: itemData.title,
                         sku: "item",
@@ -81,7 +83,7 @@ module.exports = function (pool, paypal, transcation) {
                                 currency: "USD",
                                 total: total
                             },
-                            description: "Purchasing: " +itemData.name,
+                            description: "Purchasing: " + itemData.name,
                             custom: req.body.email
                         }]
                     };

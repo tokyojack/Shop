@@ -7,6 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tokyojack/Shop"
+  },
+  "bugs": {
+    "url": "https://github.com/tokyojack/Shop/issues"
+  },
+  "homepage": "https://github.com/tokyojack/Shop#readme",
   "author": "Jack Clarke (tokyojack)",
   "license": "ISC",
   "dependencies": {

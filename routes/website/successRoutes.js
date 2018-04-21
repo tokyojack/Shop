@@ -37,7 +37,7 @@ module.exports = function (pool, paypal, transcation) {
             }
 
             var itemList = transaction.transactions[0].item_list.items;
-    
+
             pool.getConnection(function (err, connection) {
                 if (flashUtils.isDatabaseError(req, res, redirectLocation, err)) return;
 
@@ -49,8 +49,9 @@ module.exports = function (pool, paypal, transcation) {
                     if (flashUtils.isDatabaseError(req, res, redirectLocation, err))
                         return;
 
-                        var htmlContent = '<a href="' +row[0].download_url +'">Download</a>'
-                    
+                    // For the clickable URL in the email
+                    var htmlContent = '<a href="' + row[0].download_url + '">Download</a>'
+
 
                     emailUtil.sendEmail(
                         "Your items have arrivied!",
@@ -60,8 +61,10 @@ module.exports = function (pool, paypal, transcation) {
                 });
             });
 
+            // Delete's the transaction
             transcation.delete(paymentId);
 
+            // Render's the page with the custom part of the payment (email)
             res.render("website/success.ejs", {
                 email: payment.transactions[0].custom
             });

@@ -8,7 +8,7 @@ var redirectLocation = "/home";
 // URL: "/removeitem"
 module.exports = function(pool) {
 
-    // Inserts conversation from "addItemToShop.ejs" form submit
+    // Inserts the shop item from "addItemToShop.ejs" form submit
     router.get("/:id", middleMan.isLoggedIn, function(req, res) {
         pool.getConnection(function(err, connection) {
             if (flashUtils.isDatabaseError(req, res, redirectLocation, err))

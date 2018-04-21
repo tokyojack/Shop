@@ -26,7 +26,7 @@ module.exports = function(pool) {
         });
     });
 
-    // Changes it in the DB
+    // Edit's the DB info about the shop item
     router.post("/:id", middleMan.isLoggedIn, function(req, res) {
         pool.getConnection(function(err, connection) {
             if (flashUtils.isDatabaseError(req, res, redirectLocation, err))

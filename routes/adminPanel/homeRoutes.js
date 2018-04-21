@@ -23,7 +23,6 @@ module.exports = function(pool) {
               
                 res.render("adminPanel/home.ejs", { items: items });
             });
-
         });
     });
 

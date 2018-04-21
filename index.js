@@ -34,14 +34,13 @@ require('./config/passport')(passport, pool);
 //============================= Letting express use them =============================
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/public"));
-
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 app.use(bodyParser.json());
 
+app.use(express.static(__dirname + "/public"));
+
+app.use(flash());
+
+app.use(cookieParser());
 app.use(session({
     secret: 'RANDOM',
     resave: true,
@@ -50,8 +49,6 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.use(flash());
 
 app.use(function(req, res, next) {
     res.locals.error = req.flash("error");
@@ -123,7 +120,6 @@ app.listen(8080, function() {
 });
 
 //============================= Ending Server =============================
-
 
 require('./utils/nodeEnding').nodeEndingCode(nodeEndInstance);
 
