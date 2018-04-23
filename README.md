@@ -22,4 +22,5 @@ of the item you just bought.
 
 ##
 
-Now you've just install the program! This is the perfect program to start selling my "golden" hair so I can make millions. ```(ง'̀-'́)ง"``` 
+Now you've just install the program! This is the perfect program to start selling my "golden" hair so I can make millions. 
+```(ง'̀-'́)ง"``` 
